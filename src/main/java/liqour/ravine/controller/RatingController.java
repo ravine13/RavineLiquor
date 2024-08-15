@@ -32,12 +32,12 @@ public class RatingController {
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getRatingById(@PathVariable BigInteger id) {
+    public ResponseEntity<?> getRatingById(@PathVariable Integer id) {
         return ResponseEntity.ok(ratingService.getRatingById(id));
     }
 
     @DeleteMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> deleteRating(@PathVariable BigInteger id) {
+    public ResponseEntity<?> deleteRating(@PathVariable Integer id) {
         ratingService.deleteRating(id);
         return ResponseEntity.ok().build();
     }
