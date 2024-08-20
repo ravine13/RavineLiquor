@@ -62,3 +62,5 @@ public class AuthController {
         return ResponseEntity.status(HttpStatus.CREATED).body("User registered successfully");
     }
 }
+
+// register 
